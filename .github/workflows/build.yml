@@ -21,6 +21,8 @@ jobs:
       - name: Install requirements
         # Устанавливаем зависимости
         run: pip install -r requirements.txt
+      - name: Run lint
+        run: pylint main.py
       - name: Run tests
         run: coverage run main_test.py
       - name: Tests report
